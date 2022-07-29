@@ -6,7 +6,7 @@
         "items": {
           "fields": {
             "sample": "string",
-            "assay": "string",
+            "num_fq_pairs": "number",
             "target": "string",
             "fastq_pe1": "File",
             "fastq_pe2": "File"
@@ -15,7 +15,7 @@
         },
         "type": "array"
       },
-      "template": "SAMPLE\tASSAY\tTARGET\tFASTQ_PE1\tFASTQ_PE2\n{{#mapping}}\n{{sample}}\t{{assay}}\t{{target}}\t{{fastq_pe1}}\t{{fastq_pe2}}\n{{/mapping}}"
+      "template": "SAMPLE\tTARGET\tFASTQ_PE1\tFASTQ_PE2\tNUM_OF_PAIRS\n{{#mapping}}\n{{sample}}\t{{target}}\t{{fastq_pe1}}\t{{fastq_pe2}}\t{{num_fq_pairs}}\n{{/mapping}}"
     },
     {
       "id": "pairing",

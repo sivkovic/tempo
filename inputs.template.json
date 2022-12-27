@@ -56,6 +56,12 @@
       "schema": {
         "type": "bool"
       }
+    },
+        {
+      "id": "aggregate",
+      "schema": {
+        "type": "bool"
+      }
     }
   ],
   "outputs": [

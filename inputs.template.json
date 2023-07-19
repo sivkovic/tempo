@@ -57,10 +57,22 @@
         "type": "bool"
       }
     },
-        {
+    {
       "id": "aggregate",
       "schema": {
         "type": "bool"
+      }
+    },
+    {
+      "id": "assayType",
+      "schema": {
+        "type": "bool"
+      }
+    },
+    {
+      "id": "workflows",
+      "schema": {
+        "type": "string"
       }
     }
   ],

@@ -32,26 +32,6 @@
       "template": "SAMPLE\tTARGET\tFASTQ_PE1\tFASTQ_PE2\tNUM_OF_PAIRS\n{{#mapping}}\n{{sample}}\t{{target}}\t{{fastq_pe1}}\t{{fastq_pe2}}\t{{num_fq_pairs}}\n{{/mapping}}"
     },
     {
-      "id": "pairing",
-      "schema": {
-        "items": {
-          "fields": [
-            {
-              "name": "tumor",
-              "type": "string"
-            },
-            { 
-              "name": "normal",
-              "type": "string"
-            }
-          ],
-          "type": "record"
-        },
-        "type": "array"
-      },
-      "template": "NORMAL_ID\tTUMOR_ID\n{{#pairing}}\n{{normal}}\t{{tumor}}\n{{/pairing}}"
-    },
-    {
       "id": "somatic",
       "schema": {
         "type": "bool"

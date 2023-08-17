@@ -50,6 +50,12 @@
       }
     },
     {
+      "id": "genome",
+      "schema": {
+        "type": "string"
+      }
+    }
+    {
       "id": "workflows",
       "schema": {
         "type": "string"

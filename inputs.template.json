@@ -54,7 +54,7 @@
       "schema": {
         "type": "string"
       }
-    }
+    },
     {
       "id": "workflows",
       "schema": {

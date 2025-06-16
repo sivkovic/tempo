@@ -1,8 +1,8 @@
 #!/usr/bin/env nextflow
 nextflow.enable.dsl = 2
 
-if (!(workflow.profile in ['juno', 'awsbatch', 'docker', 'singularity', 'test_singularity', 'test'])) {
-  println 'ERROR: You need to set -profile (values: juno, awsbatch, docker, singularity)'
+if (!(workflow.profile in ['iris', 'juno', 'awsbatch', 'docker', 'singularity', 'test_singularity', 'test'])) {
+  println 'ERROR: You need to set -profile (values: iris, juno, awsbatch, docker, singularity)'
   exit 1
 }
 

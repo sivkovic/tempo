@@ -62,6 +62,12 @@
       }
     },
     {
+      "id": "anonymizeFQ",
+      "schema": {
+        "type": "string"
+      }
+    },
+    {
       "id": "params.outname",
       "schema": {
         "type": "string"

@@ -1,0 +1,88 @@
+{
+  "inputs": [
+    {
+      "id": "mapping",
+      "schema": {
+        "items": {
+          "fields": [
+            {
+              "name": "sample",
+              "type": "string"
+            },
+            {
+              "name" :"num_fq_pairs",
+              "type" :"number"
+            },
+            { "name": "target",
+              "type": "string"
+            },
+            {
+              "name": "fastq_pe1",
+              "type": "File"
+            },
+            {
+              "name": "fastq_pe2",
+              "type": "File"
+            }
+          ],
+          "type": "record"
+        },
+        "type": "array"
+      },
+      "template": "SAMPLE\tTARGET\tFASTQ_PE1\tFASTQ_PE2\tNUM_OF_PAIRS\n{{#mapping}}\n{{sample}}\t{{target}}\t{{fastq_pe1}}\t{{fastq_pe2}}\t{{num_fq_pairs}}\n{{/mapping}}"
+    },
+    {
+      "id": "somatic",
+      "schema": {
+        "type": "bool"
+      }
+    },
+    {
+      "id": "aggregate",
+      "schema": {
+        "type": "bool"
+      }
+    },
+    {
+      "id": "assayType",
+      "schema": {
+        "type": "bool"
+      }
+    },
+    {
+      "id": "genome",
+      "schema": {
+        "type": "string"
+      }
+    },
+    {
+      "id": "workflows",
+      "schema": {
+        "type": "string"
+      }
+    },
+    {
+      "id": "anonymizeFQ",
+      "schema": {
+        "type": "string"
+      }
+    },
+    {
+      "id": "params.outname",
+      "schema": {
+        "type": "string"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "outputs",
+      "schema": {
+        "type": {
+          "items": "File",
+          "type": "array"
+        }
+      }
+    }
+  ]
+}

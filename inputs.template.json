@@ -1,27 +1,23 @@
 {
   "inputs": [
     {
-      "id": "mapping",
+      "id": "bamMapping",
       "schema": {
         "items": {
           "fields": [
             {
               "name": "sample",
               "type": "string"
-            },
-            {
-              "name" :"num_fq_pairs",
-              "type" :"number"
-            },
+            }, 
             { "name": "target",
               "type": "string"
             },
             {
-              "name": "fastq_pe1",
+              "name": "bam",
               "type": "File"
             },
             {
-              "name": "fastq_pe2",
+              "name": "bai",
               "type": "File"
             }
           ],
@@ -29,51 +25,27 @@
         },
         "type": "array"
       },
-      "template": "SAMPLE\tTARGET\tFASTQ_PE1\tFASTQ_PE2\tNUM_OF_PAIRS\n{{#mapping}}\n{{sample}}\t{{target}}\t{{fastq_pe1}}\t{{fastq_pe2}}\t{{num_fq_pairs}}\n{{/mapping}}"
+      "template": "SAMPLE\tTARGET\tBAM\tBAI\n{{#bamMapping}}\n{{sample}}\t{{target}}\t{{bam}}\t{{bai}}\n{{/bamMapping}}"
     },
     {
       "id": "pairing",
       "schema": {
         "items": {
           "fields": [
-            {
-              "name": "assay",
-              "type": "string"
-            },
-            {
-              "name": "target",
-              "type": "string"
-            },
-            {
+            { 
               "name": "tumor_id",
               "type": "string"
             },
             {
               "name": "normal_id",
               "type": "string"
-            },
-            {
-              "name": "tumor_bam",
-              "type": "File"
-            },
-            {
-              "name": "normal_bam",
-              "type": "File"
-            },
-            {
-              "name": "tumor_bai",
-              "type": "File"
-            },
-            {
-              "name": "normal_bai",
-              "type": "File"
             }
           ],
           "type": "record"
         },
         "type": "array"
       },
-      "template": "ASSAY\tTARGET\tTUMOR_ID\tNORMAL_ID\tTUMOR_BAM\tNORMAL_BAM\tTUMOR_BAI\tNORMAL_BAI\n{{#pairing}}\n{{assay}}\t{{target}}\t{{tumor_id}}\t{{normal_id}}\t{{tumor_bam}}\t{{normal_bam}}\t{{tumor_bai}}\t{{normal_bai}}\n{{/pairing}}"
+      "template": "NORMAL_ID\tTUMOR_ID\n{{#pairing}}\n{{normal_id}}\t{{tumor_id}}\n{{/pairing}}"
     },
     {
       "id": "somatic",
